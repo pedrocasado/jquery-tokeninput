@@ -448,21 +448,6 @@
           .appendTo("body")
           .hide();
 
-      // Magic element to help us resize the text input
-      var input_resizer = $("<tester/>")
-          .insertAfter(input_box)
-          .css({
-              position: "absolute",
-              top: -9999,
-              left: -9999,
-              width: "auto",
-              fontSize: input_box.css("fontSize"),
-              fontFamily: input_box.css("fontFamily"),
-              fontWeight: input_box.css("fontWeight"),
-              letterSpacing: input_box.css("letterSpacing"),
-              whiteSpace: "nowrap"
-          });
-
       // Pre-populate list if items exist
       hiddenInput.val("");
       var li_data = $(input).data("settings").prePopulate || hiddenInput.data("pre");
