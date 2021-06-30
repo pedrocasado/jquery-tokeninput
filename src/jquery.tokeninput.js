@@ -249,9 +249,6 @@
 
         // Create a new text input an attach keyup events
         var input_box = $("<input type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
-            .css({
-                outline: "none"
-            })
             .attr("id", $(input).data("settings").idPrefix + input.id)
             .focus(function () {
                 if ($(input).data("settings").disabled) {
@@ -634,9 +631,6 @@
                     return;
                 }
             }
-
-            // Squeeze input_box so we force no unnecessary line break
-            input_box.width(1);
 
             // Insert the new tokens
             if ($(input).data("settings").tokenLimit == null || token_count < $(input).data("settings").tokenLimit) {
